@@ -53,14 +53,14 @@ export default function Header({}: Props) {
         }}
         className="flex flex-row items-center text-gray-300 cursor-pointer"
       >
+        <SocialIcon
+          className="cursor-pointer"
+          network="email"
+          fgColor="gray"
+          bgColor="transparent"
+          href="#contact"
+        />
         <Link href="#contact">
-          <SocialIcon
-            className="cursor-pointer"
-            network="email"
-            fgColor="gray"
-            bgColor="transparent"
-            href="#contact"
-          />
           <button className="uppercase hidden md:inline-flex text-sm text-gray-400">
             Get in Touch
           </button>
