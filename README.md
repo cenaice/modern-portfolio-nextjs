@@ -1,5 +1,3 @@
-# modern-portfolio-nextjs
-
 <h1>Repository for my portfolio page</h1>
 
 <h1>Tech Stack</h1>
@@ -7,3 +5,17 @@
 <li>TailwindCSS</li>
 <li>Sanity.io Backend</li>
 </ul>
+<p>
+Built with:
+Nextjs
+Reactjs
+TailwindCSS
+Sanity.io
+
+Libraries:
+react-framer-motions
+react-social-icons
+react-form-hooks
+react-simple-typewriter
+
+</p>
