@@ -19,9 +19,9 @@ function ExperienceCard({}: Props) {
       alt=""
     />
 
-    <div className="px-0 md:px-10">
-      <h4 className="text-4xl font-light">Software Engineer</h4>
-      <p className="font-bold texr-2xl mt-1">Meta</p>
+    <div className="px-0 md:px-5">
+      <h4 className="text-2xl font-light">Software Engineer</h4>
+      <p className="font-bold text-xl mt-1">Meta</p>
       <div className="flex space-x-2 my-2">
         {/* Tech Used */}
         <img

@@ -7,10 +7,11 @@ import About from "@/components/About";
 import Experiences from "@/components/Experiences";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
+import ContactMe from "@/components/ContactMe";
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-scroll z-0">
+    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 ">
       <title>Victer's Portfolio</title>
       {/* Header */}
       <Header />
@@ -23,19 +24,23 @@ const Home: NextPage = () => {
         <About />
       </section>
 
-      {/* Experiences?? */}
+      {/* Experiences?? 
       <section id="experiences" className="snap-center">
-        <Experiences/>
-      </section>
+      <Experiences />
+      </section>   
+      */}
       {/* Skills */}
       <section id="skills" className="snap-start">
-        <Skills/>
+        <Skills />
       </section>
       {/* Projects */}
       <section id="projects" className="snap-start">
-      <Projects/>
+        <Projects />
       </section>
       {/* Contact Me */}
+      <section id="contact" className="snap-start">
+        <ContactMe />
+      </section>
     </div>
   );
 };
