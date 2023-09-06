@@ -23,7 +23,7 @@ function ContactMe({}: Props) {
 
 
       <div className="flex flex-col space-y-10">
-        <h4 className="text-4xl font-semibold text-center">
+        <h4 className="lg:text-4xl text-xl font-semibold text-center">
           Let's Build Together,{" "}
           <span className="decoration-[#F7AB0A]/50 underline">
             Get in Touch.
@@ -33,17 +33,17 @@ function ContactMe({}: Props) {
         <div className="space-y-10">
         <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">609-515-0652</p>
+            <p className="lg:text-2xl">609-515-0652</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">victerphiathep@gmail.com</p>
+            <p className="lg:text-2xl">victerphiathep@gmail.com</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">New Jersey, USA</p>
+            <p className="lg:text-2xl">New Jersey, USA</p>
           </div>
         </div>
 
