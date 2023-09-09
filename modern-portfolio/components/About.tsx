@@ -39,13 +39,7 @@ const About = (props: Props) => {
           background
         </h4>
         <p className="text-base">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Hi! I'm Victer, a software engineer based in New Jersey. I am currently a senior at Rutgers University, pursuing a B.S. in Computer Science. I am passionate about building intuitive, user-friendly applications that provide users with a seamless experience. I am currently seeking full-time opportunities in software engineering. My journey here has been a long one, but I am excited to see where it takes me. Feel free to reach out to me at any time!
         </p>
       </div>
     </motion.div>
