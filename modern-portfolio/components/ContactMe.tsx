@@ -9,77 +9,83 @@ type Inputs = {
   message: string;
 };
 
-type Props = {};
-
-function ContactMe({}: Props) {
+function ContactMe() {
   const { register, handleSubmit } = useForm<Inputs>();
 
-  //       <h3 className="absolute top-12 uppercase tracking-[20px] text-gray-500 text-2xl my-16">contact</h3>
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
     window.location.href = `mailto:victerphiathep@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
   };
+
   return (
-    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
-
-
-      <div className="flex flex-col space-y-10">
-        <h4 className="lg:text-4xl text-xl font-semibold text-center">
+    <div className="min-h-screen flex flex-col md:flex-row justify-center items-center px-5 lg:px-10">
+      <div className="md:w-1/2">
+        <h4 className="lg:text-4xl text-xl font-semibold text-center md:text-left">
           Let's Build Together,{" "}
-          <span className="decoration-[#F7AB0A]/50 underline">
-            Get in Touch.
-          </span>
+          <span className="text-[#F7AB0A] underline">Get in Touch.</span>
         </h4>
 
-        <div className="space-y-10">
-        <div className="flex items-center space-x-5 justify-center">
+        <div className="space-y-5 md:space-y-10 mt-5">
+          <div className="flex items-center space-x-3">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="lg:text-2xl">609-515-0652</p>
+            <p className="text-xl">609-515-0652</p>
           </div>
 
-          <div className="flex items-center space-x-5 justify-center">
+          <div className="flex items-center space-x-3">
             <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="lg:text-2xl">victerphiathep@gmail.com</p>
+            <p className="text-xl">victerphiathep@gmail.com</p>
           </div>
 
-          <div className="flex items-center space-x-5 justify-center">
+          <div className="flex items-center space-x-3">
             <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="lg:text-2xl">New Jersey, USA</p>
+            <p className="text-xl">New Jersey, USA</p>
           </div>
         </div>
+      </div>
 
+      <div className="md:w-1/2 mt-5 md:mt-0">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-2 w-fit mx-auto"
+          className="space-y-3 max-w-md mx-auto"
         >
-          <div className="flex space-x-2">
+          <div className="space-y-2">
             <input
               {...register("name")}
               placeholder="Name"
-              className="contactInput"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md"
               type="text"
             />
+          </div>
+
+          <div className="space-y-2">
             <input
               {...register("email")}
               placeholder="Email"
-              className="contactInput"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md"
               type="email"
             />
           </div>
 
-          <input
-            {...register("subject")}
-            placeholder="Subject"
-            className="contactInput"
-            type="text"
-          />
-          <textarea
-            {...register("message")}
-            placeholder="Message"
-            className="contactInput"
-          ></textarea>
+          <div className="space-y-2">
+            <input
+              {...register("subject")}
+              placeholder="Subject"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md"
+              type="text"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <textarea
+              {...register("message")}
+              placeholder="Message"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md resize-none"
+              rows={4}
+            ></textarea>
+          </div>
+
           <button
             type="submit"
-            className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg"
+            className="w-full bg-[#F7AB0A] py-3 px-6 rounded-md text-black font-bold text-lg"
           >
             Submit
           </button>
