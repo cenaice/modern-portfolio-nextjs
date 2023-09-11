@@ -33,7 +33,7 @@ const About = (props: Props) => {
         <h3 className=" lg:absolute lg:top-24 pt-8 uppercase tracking-[20px] text-gray-500 text-2xl">
           About
         </h3>
-        <p className="text-base lg:text-lg text-sm">
+        <p className="font-mono text-base lg:text-lg text-sm">
           Hi! I'm Victer, a software engineer based in New Jersey. I am
           currently a senior at Rutgers University, pursuing a B.S. in Computer
           Science. I am passionate about building intuitive, user-friendly
