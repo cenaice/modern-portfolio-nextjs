@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { SocialIcon } from "react-social-icons";
 
+// Find modern font to match design
+
 type Props = {};
 
 type Project = {

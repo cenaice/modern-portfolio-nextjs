@@ -17,7 +17,7 @@ function ContactMe() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col md:flex-row justify-center items-center px-5 lg:px-10">
+    <div className="font-mono min-h-screen flex flex-col md:flex-row justify-center items-center px-5 lg:px-10">
       <div className="md:w-1/2">
         <h4 className="lg:text-4xl text-xl font-semibold text-center md:text-left">
           Let's Build Together,{" "}
