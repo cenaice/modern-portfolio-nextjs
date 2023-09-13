@@ -8,14 +8,12 @@
 <p>
 Built with:
 Nextjs
-Reactjs
 TailwindCSS
-Sanity.io
 
 Libraries:
 react-framer-motions
 react-social-icons
 react-form-hooks
 react-simple-typewriter
-
+...
 </p>
