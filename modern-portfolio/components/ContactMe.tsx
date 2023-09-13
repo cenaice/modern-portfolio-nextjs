@@ -21,22 +21,22 @@ function ContactMe() {
       <div className="md:w-1/2">
         <h4 className="lg:text-4xl text-xl font-semibold text-center md:text-left">
           Let's Build Together,{" "}
-          <span className="text-[#F7AB0A] underline">Get in Touch.</span>
+          <span className="text-[#c7594b] underline">Get in Touch.</span>
         </h4>
 
         <div className="space-y-5 md:space-y-10 mt-5">
           <div className="flex items-center space-x-3">
-            <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
+            <PhoneIcon className="text-[#c7594b] h-7 w-7 animate-pulse" />
             <p className="text-xl">609-515-0652</p>
           </div>
 
           <div className="flex items-center space-x-3">
-            <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
+            <EnvelopeIcon className="text-[#c7594b] h-7 w-7 animate-pulse" />
             <p className="text-xl">victerphiathep@gmail.com</p>
           </div>
 
           <div className="flex items-center space-x-3">
-            <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
+            <MapPinIcon className="text-[#c7594b] h-7 w-7 animate-pulse" />
             <p className="text-xl">New Jersey, USA</p>
           </div>
         </div>
@@ -85,7 +85,7 @@ function ContactMe() {
 
           <button
             type="submit"
-            className="w-full bg-[#F7AB0A] py-3 px-6 rounded-md text-black font-bold text-lg"
+            className="w-full bg-[#c7594b] py-3 px-6 rounded-md text-black font-bold text-lg"
           >
             Submit
           </button>

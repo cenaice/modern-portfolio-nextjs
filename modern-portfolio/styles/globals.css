@@ -5,11 +5,11 @@
 @layer components {
   .heroButton {
     @apply px-6 py-2 border 
-    border-[#242424] rounded-full uppercase text-sm tracking-widest text-gray-500 transition-all hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40;
+    border-[#242424] rounded-full uppercase text-sm tracking-widest text-gray-500 transition-all hover:border-[#c7594b]/40 hover:text-[#c7594b]/40;
   }
 
   .contactInput {
-    @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40;
+    @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#c7594b]/40 focus:text-[#c7594b]/40 hover:border-[#c7594b]/40;
   }
 }
 
@@ -35,4 +35,18 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+/* For mobile view (<= 640px width) */
+@media (max-width: 640px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
+
+/* For desktop view (> 640px width) */
+@media (min-width: 641px) {
+  .desktop-hidden {
+    display: none;
+  }
 }
