@@ -1,50 +1,87 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { SocialIcon } from "react-social-icons";
 
-// Find modern font to match design
+// NextJS Component
+
+import Image from 'next/image';
+import Head from 'next/head';
+import { motion } from "framer-motion";
+import { ReactElement } from 'react';
 
 type Props = {};
 
 type Project = {
   header: string;
   title: string;
-  description: string[];
-  imageUrl: string;
-};
+  description: string[][];
+  imageComponent: ReactElement;
+}
 
-function Projects({}: Props) {
+function Projects({ }: Props) {
   const projects: Project[] = [
     {
-      header: "Project 1",
-      title: "VicTube",
+
+      title: "VicTube - A YouTube Clone",
+      header: "",
       description: [
-        "Conceptualized and developed 'VicTube,' a YouTube clone project, utilizing TypeScript, Next.js, and Express.js, enabling users to seamlessly interact with and contribute to the platform's video-sharing capabilities.",
-        "orchestrated microservices within a Docker environment, utilizing Google Cloud Run for containerized deployment, resulting in enhanced scalability, maintainability, and resource efficiency.",
-        "Developed an intuitive video upload functionality, leveraging Google Cloud Storage to efficiently manage and store video content while ensuring optimal accessibility and scalability. While integrating a secure user authentication system using Firebase Auth, enabling seamless sign-in and sign-out functionality for users to access personalized features.",
+        ['Technologies', "Conceptualized and developed 'VicTube,' a YouTube clone project, utilizing TypeScript, Next.js, and Express.js, enabling users to seamlessly interact with and contribute to the platform's video-sharing capabilities."],
+        ['Docker', "Orchestrated microservices within a Docker environment, utilizing Google Cloud Run for containerized deployment, resulting in enhanced scalability, maintainability, and resource efficiency."],
+        ['Google Cloud', "Developed an intuitive video upload functionality, leveraging Google Cloud Storage to efficiently manage and store video content while ensuring optimal accessibility and scalability. While integrating a secure user authentication system using Firebase Auth, enabling seamless sign-in and sign-out functionality for users to access personalized features."],
+        ['Github', "Check out my project on Github!"]
       ],
-      imageUrl: "https://cdn.sanity.io/images/ltuexkre/production/af7ca99b5a796d0698cf9121a4a0795b5022b6be-666x375.png",
+      imageComponent: (
+        <Image
+          alt="..."
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=700&amp;q=80"
+          className="w-full align-middle rounded-t-lg"
+          layout="responsive"
+          width={700}
+          height={467}
+        />)
     },
 
     {
       header: "Project 2",
       title: "Weather Forecast Application",
       description: [
-        "Developed a user-friendly weather application using TypeScript, ReactJS, and Node.js, providing real-time weather updates and forecasts to users.",
-        " Integrated RESTful APIs to fetch weather data and utilized Node.js to manage server-side logic, optimizing data retrieval and ensuring smooth application performance.",
-        " Leveraged TailwindCSS to efficiently style components and ensure consistent design across the application, resulting in a polished and professional user experience.",
+        ['Technologies', 'Developed a user-friendly weather application using TypeScript, ReactJS, and Node.js, providing real-time weather updates and forecasts to users.'],
+        ['API', "Integrated RESTful APIs to fetch weather data and utilized Node.js to manage server-side logic, optimizing data retrieval and ensuring smooth application performance.",
+        ],
+        ['TailWindCSS', "Developed a user-friendly weather application using TypeScript, ReactJS, and Node.js, providing real-time weather updates and forecasts to users.",
+        ],
+        ['Github', 'Check out my project on Github!'],
+
       ],
-      imageUrl:
-        "https://cdn.sanity.io/images/ltuexkre/production/af7ca99b5a796d0698cf9121a4a0795b5022b6be-666x375.png",
+      imageComponent: (
+        <Image
+          alt="..."
+          src="/images/weather-application.png"
+          className="w-full align-middle rounded-t-lg"
+          layout="responsive"
+          width={700}
+          height={467}
+        />)
+
     },
 
     {
-      header: "Project 3",
-      title: "Yet Another Project",
-      description: ["Coming soon..."],
-      imageUrl: "https://cdn.sanity.io/images/ltuexkre/production/af7ca99b5a796d0698cf9121a4a0795b5022b6be-666x375.png",
-    },
-  ];
+      header: "Introducing my innovative Tech Job Portal, a platform tailored for tech enthusiasts seeking their next career milestone. At its core, this portal is a harmonious fusion of technology and utility, designed to bridge the gap between job seekers and their dream positions in the tech realm.",
+      title: "Tech Job Portal (In Development)",
+      description: [
+        ['API Integrations', "Seamlessly integrated with LinkedIn and Indeed APIs, the portal offers a vast array of job listings, fetching real-time data to ensure users have access to the latest opportunities."],
+        ['Frontend', "Leveraging the power and flexibility of ReactJS, the portal's frontend delivers a responsive, intuitive, and user-friendly experience."],
+        ['UI Componnents', "Enhanced with MantineUI, the design elements are not only aesthetically pleasing but also optimized for functionality, ensuring that users can navigate and operate with ease.",],
+        ['Backend & Authentication', "Powered by Google Firebase, the platform guarantees secure data management and storage. Coupled with Google Auth, users can expect a robust and secure authentication process, ensuring their data's safety and integrity."
+        ],
+      ],
+      imageComponent: (
+        <Image
+          alt="..."
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=700&amp;q=80"
+          className="w-full align-middle rounded-t-lg"
+          layout="responsive"
+          width={700}
+          height={467}
+        />)
+    }];
 
   return (
     <motion.div
@@ -52,56 +89,108 @@ function Projects({}: Props) {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
+
     >
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#c7594b]/80 ">
-        {projects.map((project) => (
-          <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
-            {
-                <motion.img
-                  initial={{
-                    y: -300,
-                    opacity: 0,
-                  }}
-                  transition={{ duration: 1 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  src={project.imageUrl}
-                  alt=""
-                  className="hidden md:block w-80"
-                />}
-            <div className="flex items-center justify-center">
-              <h3 className="absolute top-20 lg:top-24 uppercase tracking-[20px] text-gray-500 xl:text-4xl text-xl ">
-                Projects
-              </h3>
-            </div>
-            <div className="space-y-3 px-0 md:px-10 max-w-6xl">
-              <h4 className="sm:text-xs xl:text-4xl font-semibold text-center">
-                <span className="underline decoration-[#c7594b]/50">
-                  {" "}
-                  {project.header}:
-                </span>{" "}
-                {project.title}
-              </h4>
-              <p className="text-xs xl:text-lg sm:text-left text-center md:text-left">
-                {project.description}
-              </p>
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
+        />
+      </Head>
 
-              <span className="flex items-center justify-center cursor-pointer">
-                <SocialIcon
-                  url="https://github.com/cenaice"
-                  fgColor="gray"
-                  bgColor="transparent"
-                  style={{ height: 50, width: 50 }}
-                />
-              </span>
-            </div>
-          </div>
-        ))}
-      </div>
+      <section className="relative pt-16 overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#c7594b]/80">
+        <div className="flex space-x-4 container mx-auto">
+          {projects.map((project, idx) => (
+            <div key={idx} className="w-screen flex-none w-screen snap-center flex flex-wrap items-center px-8">
+              <div className="w-10/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-78">
+                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-500">
+                  {project.imageComponent}
+                  <blockquote className="relative p-8 mb-4">
+                    <svg
+                      preserveAspectRatio="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 583 95"
+                      className="absolute left-0 w-full block h-95-px -top-94-px"
+                    >
+                      <polygon points="-30,95 583,95 583,65" className="text-pink-500 fill-current"></polygon>
+                    </svg>
+                    <h4 className="text-xl font-bold text-gray-500">
+                      {project.title}
+                    </h4>
+                    <p className="text-md font-light mt-2 text-gray-500">
+                      {project.header}
+                    </p>
+                  </blockquote>
+                </div>
+              </div>
 
-      <div className="w-full absolute top-[30%] bg-[#c7594b]/10 left-0 h-[500px] -skew-y-12"></div>
+              {/* Rest of your content */}
+              <div className="w-full md:w-6/12 px-4">
+                <div className="flex flex-wrap">
+                  <div className="w-full md:w-6/12 px-4">
+                    <div className="relative flex flex-col mt-4">
+                      <div className="px-4 py-5 flex-auto">
+                        <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
+                          <i className="fas fa-sitemap"></i>
+                        </div>
+                        <h6 className="text-xl mb-1 font-semibold">{project.description[0][0]}</h6>
+                        <p className="mb-4 text-blueGray-500">
+                          {project.description[1][1]}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="relative flex flex-col min-w-0">
+                      <div className="px-4 py-5 flex-auto">
+                        <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
+                          <i className="fas fa-drafting-compass"></i>
+                        </div>
+                        <h6 className="text-xl mb-1 font-semibold">
+                          {project.description[1][0]}
+                        </h6>
+                        <p className="mb-4 text-blueGray-500">
+                          {project.description[1][1]}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="w-full md:w-6/12 px-4">
+                    <div className="relative flex flex-col min-w-0 mt-4">
+                      <div className="px-4 py-5 flex-auto">
+                        <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
+                          <i className="fas fa-newspaper"></i>
+                        </div>
+                        <h6 className="text-xl mb-1 font-semibold">{project.description[2][0]}</h6>
+                        <p className="mb-4 text-blueGray-500">
+                          {project.description[2][1]}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="relative flex flex-col min-w-0">
+                      <div className="px-4 py-5 flex-auto">
+                        <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
+                          <i className="fas fa-file-alt"></i>
+                        </div>
+                        <h6 className="text-xl mb-1 font-semibold">{project.description[3][0]}</h6>
+                        <p className="mb-4 text-blueGray-500">
+                          {project.description[3][1]}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          ))}
+        </div>
+      </section>
     </motion.div>
   );
 }
 
 export default Projects;
+
